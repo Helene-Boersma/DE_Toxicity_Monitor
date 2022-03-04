@@ -7,5 +7,10 @@ pipeline{
                 bat "docker-compose up --build"
             }
         }
+    stage('Unit Test'){
+            steps{
+                bat "python -m pytest Test/unit_tests.py"
+            }
+        }
     }
 }
