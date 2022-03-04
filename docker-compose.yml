@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "final_project"
+    ports:
+      - "5000:5000"
