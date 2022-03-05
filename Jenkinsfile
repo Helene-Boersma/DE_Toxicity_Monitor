@@ -9,8 +9,8 @@ pipeline{
                         sh "docker-compose up --build"
                     },
                     test: {
-                        sleep 30
-                        sh "pytest"
+                        sleep 20
+                        sh "python3 -m pytest Test/unit_tests.py "
                     }
                 )
             }
