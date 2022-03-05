@@ -2,16 +2,11 @@ pipeline{
     agent any
     
     stages{
-        stage('NPM Build'){
-            steps{
-                sh "docker-compose build"
-            }
-        }
-        stage('Docker up / down') {
+        stage('Docker build / Up') {
             steps {
                 parallel(
                     docker: {
-                        sh "docker-compose up"
+                        sh "docker-compose up --build"
                     },
                     test: {
                         sleep 12
