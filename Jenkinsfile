@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('NPM Build'){
             steps{
-                // sh "docker-compose build"
+                sh "docker-compose build"
                 echo "Image Already build"
             }
         }
@@ -15,7 +15,7 @@ pipeline{
                         sh "docker-compose up"
                     },
                     test: {
-                        sleep 12
+                        sleep 120
                         sh "pip install pytest"
                         sh "python3 -m pytest Test/unit_tests.py"
                     }
