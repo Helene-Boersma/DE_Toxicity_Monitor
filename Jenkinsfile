@@ -16,6 +16,7 @@ pipeline{
         }
         stage('Unit Test'){
             steps{
+                sh "conda activate dataeng"
                 sh "cd Test/"
                 sh "python3 -m pytest unit_tests.py"
             }
