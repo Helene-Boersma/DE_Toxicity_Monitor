@@ -26,7 +26,7 @@ pipeline{
                 sh 'pip install pytest'
                 sh "cd Test/"
                 sh 'pytest unit_tests.py'
-    }
-}
+            }
+        }
     }
 }
