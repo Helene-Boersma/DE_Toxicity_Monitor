@@ -1,37 +1,27 @@
+18:11
+Quentin
+Quentin Courtois
 pipeline{
     agent any
     
     stages{
-        stage('Docker Build'){
-            steps{
-                bat "docker-compose build"
-            }
-        }
-        stage('Docker up / down') {
+        stage('Docker build / Up') {
             steps {
                 parallel(
                     docker: {
-                        bat "docker-compose up"
-                        bat "y"
+                        sh "docker-compose up --build"
                     },
                     test: {
-                        sleep 300
-                        bat "python3 -m pytest Test/unit_tests.py"
+                        sleep 30
+                        sh "pytest"
                     }
                 )
-                
-                // sh "docker-compose up"
-                // echo 'Testing'
-                // // sh "docker-compose down"
             }
         }
-        // stage('Unit Test'){
-        //     steps{
-        //         sh "pip install pytest"
-        //         sh "python3 -m pytest Test/unit_tests.py"
-        //         //sh "pip install selenium"
-        //         //sh "python3 -m pytest Test/test_web_page.py"
-        //     }
-        // }
     }
+    post {
+      always {
+         sh "docker-compose down || true"
+      }
+   } 
 }
