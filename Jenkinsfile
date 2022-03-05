@@ -16,9 +16,8 @@ pipeline{
         }
         stage('Unit Test'){
             steps{
-                sh "cd Test/"
                 sh "pip install pytest"
-                sh "python3 -m pytest unit_tests.py"
+                sh "python3 -m pytest Test/unit_tests.py"
             }
         }
     }
