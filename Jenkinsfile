@@ -12,8 +12,12 @@ pipeline{
                         sleep 20
                         sh "python3 -m pytest Test/unit_tests.py"
                     },
-                    shutdown: {
+                    test2: {
                         sleep 30
+                        sh "python3 -m pytest Test/test_web_page.py "
+                    },
+                    shutdown: {
+                        sleep 50
                         sh "docker-compose down"
                     }
                 )
