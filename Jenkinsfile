@@ -9,7 +9,7 @@ pipeline{
                         bat "docker-compose up --build"
                     },
                     test: {
-                        sleep 30
+                        sleep 15
                         bat "pytest"
                     }
                 )
