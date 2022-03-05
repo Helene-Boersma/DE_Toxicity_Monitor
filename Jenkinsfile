@@ -1,6 +1,3 @@
-18:11
-Quentin
-Quentin Courtois
 pipeline{
     agent any
     
