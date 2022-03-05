@@ -4,12 +4,12 @@ pipeline{
     stages{
         stage('NPM Build'){
             steps{
-                bat "docker-compose up --build"
+                sh "docker-compose up --build"
             }
         }
     stage('Unit Test'){
             steps{
-                bat "python -m pytest Test/unit_tests.py"
+                sh "python -m pytest Test/unit_tests.py"
             }
         }
     }
