@@ -20,13 +20,5 @@ pipeline{
                 sh "python3 -m pytest unit_tests.py"
             }
         }
-        stage("test PythonEnv") {
-
-            withPythonEnv('python3') {
-                sh 'pip install pytest'
-                sh "cd Test/"
-                sh 'pytest unit_tests.py'
-            }
-        }
     }
 }
