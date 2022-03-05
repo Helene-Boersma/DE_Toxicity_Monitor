@@ -15,7 +15,7 @@ pipeline{
                         sh "y"
                     },
                     test: {
-                        sleep 120
+                        sleep 300
                         sh "pip install pytest"
                         sh "python3 -m pytest Test/unit_tests.py"
                     }
