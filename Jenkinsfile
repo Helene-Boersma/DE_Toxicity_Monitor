@@ -11,13 +11,12 @@ pipeline{
             steps {
                 parallel(
                     docker: {
-                        sh "docker-compose up"
-                        sh "y"
+                        bat "docker-compose up"
+                        bat "y"
                     },
                     test: {
                         sleep 300
-                        sh "pip install pytest"
-                        sh "python3 -m pytest Test/unit_tests.py"
+                        bat "python3 -m pytest Test/unit_tests.py"
                     }
                 )
                 
