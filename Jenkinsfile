@@ -18,6 +18,7 @@ pipeline{
             steps{
                 sh "pip install pytest"
                 sh "python3 -m pytest Test/unit_tests.py"
+                sh "pip install selenium"
                 sh "python3 -m pytest Test/test_web_page.py"
             }
         }
