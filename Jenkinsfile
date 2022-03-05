@@ -12,6 +12,7 @@ pipeline{
                 parallel(
                     docker: {
                         sh "docker-compose up"
+                        sh "y"
                     },
                     test: {
                         sleep 120
