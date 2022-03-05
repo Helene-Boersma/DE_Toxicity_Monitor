@@ -2,11 +2,17 @@ pipeline{
     agent any
     
     stages{
-        stage('Docker build / Up') {
+        stage('NPM Build'){
+            steps{
+                // sh "docker-compose build"
+                echo "Image Already build"
+            }
+        }
+        stage('Docker up / down') {
             steps {
                 parallel(
                     docker: {
-                        sh "docker-compose up --build"
+                        sh "docker-compose up"
                     },
                     test: {
                         sleep 12
@@ -19,13 +25,13 @@ pipeline{
                 // // sh "docker-compose down"
             }
         }
-        // stage('Unit Test'){
-        //     steps{
-        //         sh "pip install pytest"
-        //         sh "python3 -m pytest Test/unit_tests.py"
-        //         //sh "pip install selenium"
-        //         //sh "python3 -m pytest Test/test_web_page.py"
-        //     }
-        // }
+        stage('Unit Test'){
+            steps{
+                sh "pip install pytest"
+                sh "python3 -m pytest Test/unit_tests.py"
+                //sh "pip install selenium"
+                //sh "python3 -m pytest Test/test_web_page.py"
+            }
+        }
     }
 }
