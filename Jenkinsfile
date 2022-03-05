@@ -10,7 +10,7 @@ pipeline{
                     },
                     test: {
                         sleep 12
-                        bat "pip install pytest"
+                  //      bat "pip install pytest"
                         bat "python -m pytest Test/unit_tests.py"
                     }
                 )
