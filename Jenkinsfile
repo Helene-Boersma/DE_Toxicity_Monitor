@@ -10,15 +10,21 @@ pipeline{
                     },
                     test: {
                         sleep 20
-                        sh "python3 -m pytest Test/unit_tests.py "
+                        sh "python3 -m pytest Test/unit_tests.py"
+                    }
+                    shutdown: {
+                        sleep 40
+                        sh "docker-compose down"
                     }
                 )
             }
         }
     }
-    post {
-      always {
-         sh "docker-compose down || true"
-      }
-   } 
+    
+//     post {
+//       always {
+//          sh "docker-compose down || true"
+//       }
+//     } 
+    
 }
