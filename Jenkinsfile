@@ -9,8 +9,18 @@ pipeline{
         }
         stage('Docker up / down') {
             steps {
+                parallel(
+                    docker: {
+                        sh "docker-compose up"
+                    },
+                    test: {
+                        sleep 120
+                        sh "pip install pytest"
+                        sh "python3 -m pytest Test/unit_tests.py"
+                    }
+                )
                 
-                sh "docker-compose up"
+                // sh "docker-compose up"
                 // echo 'Testing'
                 // // sh "docker-compose down"
             }
