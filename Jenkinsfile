@@ -16,7 +16,8 @@ pipeline{
         }
         stage('Unit Test'){
             steps{
-                sh "python -m pytest /home/my_jenkins_home/workspace/dataeng_final_project_automation/Test/unit_tests.py"
+                sh "cd Test/"
+                sh "python3 -m pytest unit_tests.py"
             }
         }
     }
