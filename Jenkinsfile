@@ -10,6 +10,7 @@ pipeline{
                     },
                     test: {
                         sleep 20
+                        sh 'pip install pandas'
                         sh "python3 -m pytest model/unit_tests.py"
                     },
                     shutdown: {
