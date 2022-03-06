@@ -3,9 +3,6 @@ import sys
 import pytest
 import requests
 from flask import Flask, request, render_template
-
-sys.path.insert(1, '../model')
-
 from model_toxicity import detoxify
 
 
