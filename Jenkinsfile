@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pipeline{
     agent any
     
@@ -10,8 +11,6 @@ pipeline{
                     },
                     unit_tests: {
                         sleep 20
-                        // sh 'pip install pandas'
-                        // sh 'pip install detoxify'
                         sh "python3 -m pytest model/unit_tests.py"
                     },
                     stress_test: {
@@ -27,10 +26,5 @@ pipeline{
         }
     }
     
-//     post {
-//       always {
-//          sh "docker-compose down || true"
-//       }
-//     } 
-    
 }
+
