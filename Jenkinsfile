@@ -10,16 +10,16 @@ pipeline{
                     },
                     unit_tests: {
                         sleep 20
-                        sh 'pip install pandas'
-                        sh 'pip install detoxify'
+                        // sh 'pip install pandas'
+                        // sh 'pip install detoxify'
                         sh "python3 -m pytest model/unit_tests.py"
                     },
                     stress_test: {
-                        sleep 80
+                        sleep 40
                         sh "python3 -m pytest Test/stress_test.py"
                     },
                     shutdown: {
-                        sleep 210
+                        sleep 60
                         sh "docker-compose down"
                     }
                 )
