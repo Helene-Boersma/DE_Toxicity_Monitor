@@ -11,6 +11,7 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 RUN pip install pytest
 RUN pip install selenium
+RUN pip install pandas
 
 EXPOSE 5000
 
