@@ -1,0 +1,23 @@
+1646501330983	geckodriver	INFO	Listening on 127.0.0.1:44297
+1646501330989	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "35401" "-no-remote" "-profile" "/tmp/rust_mozprofile8GD0JF"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1646501332760	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8GD0JF/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:35401/devtools/browser/9dfdb3aa-dc3e-499c-9414-4fce42ef3f49
+1646501334826	Marionette	INFO	Listening on port 38233
+1646501334957	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1646501341362	Marionette	INFO	Stopped listening on port 38233
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1646501383738	geckodriver	INFO	Listening on 127.0.0.1:41617
+1646501383744	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "40993" "-no-remote" "-profile" "/tmp/rust_mozprofilenGZ2gq"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1646501385439	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilenGZ2gq/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:40993/devtools/browser/04652b8b-bad2-40d6-80a7-6718b4d184bf
+1646501387344	Marionette	INFO	Listening on port 45813
+1646501387393	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1646501393797	Marionette	INFO	Stopped listening on port 45813
