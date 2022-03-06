@@ -8,11 +8,15 @@ pipeline{
                     docker: {
                         sh "docker-compose up --build"
                     },
-                    test: {
+                    unit_tests: {
                         sleep 20
                         sh 'pip install pandas'
                         sh 'pip install detoxify'
                         sh "python3 -m pytest model/unit_tests.py"
+                    },
+                    stress_test: {
+                        sleep 80
+                        sh "python3 -m pytest Test/stress_test.py"
                     },
                     shutdown: {
                         sleep 210
