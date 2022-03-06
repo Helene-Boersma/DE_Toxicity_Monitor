@@ -9,6 +9,8 @@ ENV FLASK_RUN_HOST=0.0.0.0
 COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
+RUN pip install pytest
+RUN pip install selenium
 
 EXPOSE 5000
 

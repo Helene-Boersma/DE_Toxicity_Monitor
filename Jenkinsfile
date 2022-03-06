@@ -2,26 +2,29 @@ pipeline{
     agent any
     
     stages{
-        stage('Docker Build'){
-            steps{
-                sh "docker-compose build"
-            }
-        }
-        stage('Docker up / down') {
+        stage('Docker build / Up') {
             steps {
-                
-                sh "docker-compose up"
-                // echo 'Testing'
-                // // sh "docker-compose down"
+                parallel(
+                    docker: {
+                        sh "docker-compose up --build"
+                    },
+                    test: {
+                        sleep 20
+                        sh "python3 -m pytest Test/unit_tests.py"
+                    },
+                    shutdown: {
+                        sleep 210
+                        sh "docker-compose down"
+                    }
+                )
             }
         }
-        // stage('Unit Test'){
-        //     steps{
-        //         sh "pip install pytest"
-        //         sh "python3 -m pytest Test/unit_tests.py"
-        //         //sh "pip install selenium"
-        //         //sh "python3 -m pytest Test/test_web_page.py"
-        //     }
-        // }
     }
+    
+//     post {
+//       always {
+//          sh "docker-compose down || true"
+//       }
+//     } 
+    
 }
