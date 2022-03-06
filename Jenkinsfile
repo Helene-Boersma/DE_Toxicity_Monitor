@@ -10,7 +10,7 @@ pipeline{
                     },
                     test: {
                         sleep 20
-                        sh "python3 -m pytest Test/unit_tests.py"
+                        sh "python3 -m pytest model/unit_tests.py"
                     },
                     shutdown: {
                         sleep 210
