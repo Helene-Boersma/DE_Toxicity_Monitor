@@ -14,6 +14,7 @@ RUN pip install selenium
 RUN pip install pandas
 
 EXPOSE 5000
+EXPOSE 8010
 
 COPY . .
 
