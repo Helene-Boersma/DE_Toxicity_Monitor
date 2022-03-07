@@ -1,0 +1,16 @@
+route:
+  receiver: 'mail'
+  repeat_interval: 4h
+  group_by: [ alertname ]
+
+
+receivers:
+- name: 'mail'
+  email_configs:
+  - to: zikki.gyun@gmail.com
+    from: zikki.gyun@gmail.com
+    smarthost: smtp.gmail.com:587
+    auth_username: zikki.gyun@gmail.com
+    auth_identity: zikki.gyun@gmail.com
+    auth_password: 'pqvigvkfxxbipnoa'
+    send_resolved: true
