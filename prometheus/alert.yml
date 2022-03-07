@@ -12,5 +12,5 @@ receivers:
     smarthost: smtp.gmail.com:587
     auth_username: zikki.gyun@gmail.com
     auth_identity: zikki.gyun@gmail.com
-    auth_password: 'pqvigvkfxxbipnoa'
+    auth_password: ''
     send_resolved: true
