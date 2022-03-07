@@ -11,3 +11,13 @@ console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message f
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
 
+1646596037921	geckodriver	INFO	Listening on 127.0.0.1:44635
+1646596038428	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "59581" "-no-remote" "-profile" "/tmp/rust_mozprofileZqRXQs"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1646596039980	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZqRXQs/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59581/devtools/browser/edb3174e-5175-44d2-bfb6-bf7d7ebfb26a
+1646596042003	Marionette	INFO	Listening on port 39423
+1646596042110	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1646596049422	Marionette	INFO	Stopped listening on port 39423
