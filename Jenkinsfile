@@ -6,7 +6,7 @@ pipeline{
             steps {
                 parallel(
                     docker: {
-                        sh "docker-compose up --build"
+                        sh "docker-compose up"
                     },
                     unit_tests: {
                         sleep 70
