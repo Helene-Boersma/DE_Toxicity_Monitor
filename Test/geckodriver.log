@@ -21,3 +21,13 @@ DevTools listening on ws://localhost:59581/devtools/browser/edb3174e-5175-44d2-b
 1646596042110	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
 1646596049422	Marionette	INFO	Stopped listening on port 39423
+1646692037881	geckodriver	INFO	Listening on 127.0.0.1:49787
+1646692038385	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "59345" "-no-remote" "-profile" "/tmp/rust_mozprofileKTa35Z"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1646692040062	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileKTa35Z/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59345/devtools/browser/ac3953a1-855b-4fe3-aa17-73e373a941fb
+1646692042114	Marionette	INFO	Listening on port 36013
+1646692042234	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1646692047244	Marionette	INFO	Stopped listening on port 36013
