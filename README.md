@@ -32,7 +32,7 @@ All the ports of the project :
 
 Adress : https://hub.docker.com/r/guillaumeefrei/final_project_dataengineering/tags
 
-You can also run this command : docker pull guillaumeefrei/final_project_dataengineering:latest
+You can also run this command : *docker pull guillaumeefrei/final_project_dataengineering:latest*
 
 <div align="center">
 <a href="https://www.efrei.fr/" target="_blank"><img src="https://www.efrei.fr/wp-content/uploads/2022/01/LOGO_EFREI-PRINT_EFREI-WEB.png" width="270" height="100"></a>
