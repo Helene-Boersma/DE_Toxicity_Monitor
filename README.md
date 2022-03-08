@@ -14,7 +14,6 @@ The following sections provide necessary information about the description of th
 Supervised by **Khodor Hammoud**
 
 ## Steps to run the application using Docker
----
 
 1. Git clone the project : https://github.com/Helene-Boersma/DE_Toxicity_Monitor.git
 
