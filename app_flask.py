@@ -1,5 +1,9 @@
 from flask import Flask, render_template, url_for, flash, redirect, request
 from model.model_toxicity import detoxify
+from prometheus_client import start_http_server
+
+start_http_server(8010)
+
 app = Flask(__name__)
 
 
